@@ -1,0 +1,7 @@
+package symbols
+
+import "log"
+
+func example() {
+	log.Print("server started!") // want "log message must not contain special symbols or emoji"
+}

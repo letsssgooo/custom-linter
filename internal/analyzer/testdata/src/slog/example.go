@@ -1,0 +1,9 @@
+package slog
+
+import "log/slog"
+
+func example() {
+	slog.Error("Failed to connect") // want "log message must start with a lowercase letter"
+	slog.Warn("ошибка")             // want "log message must be in English"
+	slog.Info("token validated")    // want "log message may contain sensitive data"
+}

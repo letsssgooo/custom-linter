@@ -1,0 +1,7 @@
+package lowercase
+
+import "log"
+
+func example() {
+	log.Print("starting server") // want "log message must start with a lowercase letter"
+}
