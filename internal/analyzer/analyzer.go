@@ -4,6 +4,7 @@ import (
 	"go/ast"
 	"go/token"
 	"go/types"
+	"log/slog"
 	"os"
 	"strconv"
 
@@ -20,9 +21,7 @@ var Analyzer = &analysis.Analyzer{
 
 func run(pass *analysis.Pass) (any, error) {
 	cfg, err := config.Load(os.Getenv("LINTER_CONFIG"))
-	if err != nil {
-		return nil, err
-	}
+	slog.Warn("error while loading config using default values", "error", err)
 
 	for _, file := range pass.Files {
 		ast.Inspect(file, func(n ast.Node) bool {

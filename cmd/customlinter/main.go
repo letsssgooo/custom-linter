@@ -8,6 +8,6 @@ import (
 )
 
 func main() {
-	log.Println("ваиваиваиваи")
+	log.Println("starting custom linter")
 	singlechecker.Main(analyzer.Analyzer)
 }
